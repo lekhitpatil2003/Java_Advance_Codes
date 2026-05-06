@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd" id="WebApp_ID" version="5.0">
+  <display-name>ServletConfigTest</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  
+  	<servlet>
+	<servlet-name>ServletConfigClass</servlet-name>
+	<servlet-class>com.ServletConfigClass</servlet-class>
+			
+	<init-param>
+	<param-name>name</param-name>
+	<param-value>Lekhit</param-value>
+	</init-param>
+	
+	<init-param>
+	<param-name>surname</param-name>
+	<param-value>Patil</param-value>
+	</init-param>
+	</servlet>
+	
+	<servlet>
+	<servlet-name>ServletTwo</servlet-name>
+	<servlet-class>com.ServletTwo</servlet-class>
+		
+	<init-param>
+	<param-name>driver</param-name>
+	<param-value>com.mysql</param-value>
+	</init-param>
+	
+	<init-param>
+	<param-name>setting</param-name>
+	<param-value>file</param-value>
+	</init-param>
+	</servlet>
+	
+	<context-param>
+	<param-name>Project</param-name>
+	<param-value>general</param-value>
+	</context-param>
+	
+	<servlet-mapping>
+	<servlet-name>ServletConfigClass</servlet-name>
+	<url-pattern>/ServletConfigClass</url-pattern>
+	</servlet-mapping>
+	
+	<servlet-mapping>
+	<servlet-name>ServletTwo</servlet-name>
+	<url-pattern>/ServletTwo</url-pattern>
+	</servlet-mapping>
+</web-app>
